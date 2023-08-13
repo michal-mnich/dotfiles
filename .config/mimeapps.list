@@ -1,3 +1,4 @@
 
 [Default Applications]
 application/pdf=librewolf.desktop
+text/html=librewolf.desktop

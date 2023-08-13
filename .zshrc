@@ -50,3 +50,4 @@ alias nvimcfg="nvim $HOME/.config/nvim/init.lua"
 alias kittycfg="nvim $HOME/.config/kitty/kitty.conf"
 
 alias tlupgrade="sudo tlmgr update --all"
+alias rsupgrade="rustup update"
