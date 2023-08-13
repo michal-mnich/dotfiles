@@ -27,6 +27,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # My aliases
 alias vim="nvim"
+alias python="ipython"
 alias agrep="alias | grep"
 
 alias cfg="git --git-dir=$HOME/.mycfg/ --work-tree=$HOME"
