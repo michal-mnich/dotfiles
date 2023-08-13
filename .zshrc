@@ -27,8 +27,21 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # My aliases
 alias vim="nvim"
+alias agrep="alias | grep"
 
-alias gitcfg="git --git-dir=$HOME/.mycfg/ --work-tree=$HOME"
+alias cfg="git --git-dir=$HOME/.mycfg/ --work-tree=$HOME"
+
+alias cfgc="cfg commit --verbose"
+alias "cfgc!"="cfgc --amend"
+alias cfgca="cfgc --all"
+alias "cfgca!"="cfgc --all --amend"
+
+alias cfga="cfg add"
+alias cfgaa="cfg add -all"
+
+alias cfgst="cfg status"
+alias cfgp="cfg push"
+
 alias hyprcfg="nvim $HOME/.config/hypr/hyprland.conf"
 alias swaycfg="nvim $HOME/.config/sway/config"
 alias waybarcfg="cd $HOME/.config/waybar"
