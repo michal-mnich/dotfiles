@@ -1,0 +1,141 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    // height calculated dynamically
+
+    "modules-left": [
+        "wlr/workspaces",
+        "hyprland/submap",
+        "custom/splash"
+    ],
+
+    "modules-center": [
+        "hyprland/window"
+    ],
+
+    "modules-right": [
+        "network",
+        "memory",
+        "cpu",
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "clock#date",
+        "clock#time"
+    ],
+
+    "battery": {
+        "interval": 10,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        // Connected to AC
+        "format": "  {icon}  {capacity}%",
+        // Not connected to AC
+        "format-discharging": "{icon}  {capacity}%",
+        "format-icons": [
+            " ", 
+            " ",
+            " ",
+            " ",
+            " " 
+        ],
+        "tooltip": true
+    },
+
+    "clock#time": {
+        "interval": 1,
+        "format": "{:%H:%M}",
+        "tooltip": true
+    },
+
+    "clock#date": {
+      "interval": 10,
+      "format": "󰃭  {:%d-%m-%Y}",
+      "tooltip-format": "{:%e %B %Y}"
+    },
+
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage}%",
+        "states": {
+          "warning": 70,
+          "critical": 90
+        }
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "  {}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    "network": {
+        "interval": 5,
+        "format-wifi": "  {essid} ({signalStrength}%)",
+        "format-ethernet": "󰈀  {ifname}: {ipaddr}/{cidr}",
+        "format-disconnected": "  Disconnected",
+        "tooltip-format": "{ipaddr}"
+    },
+
+    "hyprland/submap": {
+       "format": "{}",
+       "max-length": 8,
+       "tooltip": false
+    },
+
+    "hyprland/window": {
+        "format": "{class}"
+    },
+
+    "custom/splash": {
+        "exec": "hyprctl splash",
+        "restart-interval": 60,
+        "format": "{}"
+    },
+
+    "wlr/workspaces": {
+        "format": "{name}: {icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "1": "",
+            "2": "󰈹",
+            "3": "󰨞",
+            "4": "󰌆",
+            "default": ""
+        },
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": []
+        }
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"],
+        "reverse-scrolling": true
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [""],
+        "reverse-scrolling": true
+    },
+}
