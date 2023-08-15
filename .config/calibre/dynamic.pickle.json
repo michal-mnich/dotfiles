@@ -9,10 +9,19 @@
       "6.24"
     ]
   },
+  "save to disk dialog": "/home/michal/ksiazki",
   "sort_history": [
     [
-      "timestamp",
-      false
+      "title",
+      true
+    ],
+    [
+      "pubdate",
+      true
+    ],
+    [
+      "#pages",
+      true
     ],
     [
       "timestamp",

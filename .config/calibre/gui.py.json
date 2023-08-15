@@ -53,10 +53,18 @@
   "oldest_news": 60,
   "overwrite_author_title_metadata": true,
   "plugin_search_history": [],
-  "save_to_disk_template_history": [],
+  "save_to_disk_template_history": [
+    "{title} {authors}",
+    "{title}_{authors}",
+    "{author_sort}/{title}/{title} - {authors}"
+  ],
   "scheduler_search_history": [],
   "search_as_you_type": false,
-  "send_to_device_template_history": [],
+  "send_to_device_template_history": [
+    "{title} {authors}",
+    "{title}_{authors}",
+    "{author_sort}/{title} - {authors}"
+  ],
   "send_to_storage_card_by_default": false,
   "separate_cover_flow": false,
   "shortcuts_search_history": [],

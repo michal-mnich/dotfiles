@@ -5,7 +5,7 @@
   ],
   "book_list_pin_splitter_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAEAAAACAAABAP////8A/////wEAAAABAA=="
+    "__value__": "AAAA/wAAAAEAAAACAAABAAAAAEYA/////wEAAAABAA=="
   },
   "card_a_view books view state": {
     "column_alignment": {
@@ -91,10 +91,17 @@
       ]
     ]
   },
+  "color_palette": "dark",
   "cover_browser_splitter_vertical_state": [
     false,
     300
   ],
+  "cover_grid_color": [
+    80,
+    80,
+    80
+  ],
+  "cover_grid_texture": null,
   "custom_colors_for_color_dialog": [
     [
       255,
@@ -193,31 +200,32 @@
       255
     ]
   ],
+  "default_author_link": null,
   "do_not_show_device_open_popup_message_KINDLE2": true,
   "geometry-of-calibre_main_window_geometry": {
     "frame_geometry": {
-      "height": 996,
-      "width": 1662,
+      "height": 1038,
+      "width": 851,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
-      "height": 996,
-      "width": 1662,
+      "height": 1038,
+      "width": 851,
       "x": 0,
       "y": 0
     },
     "maximized": false,
     "normal_geometry": {
-      "height": 996,
-      "width": 1662,
+      "height": 1038,
+      "width": 851,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABn0AAAPjAAAAAAAAAAAAAAZ9AAAD4wAAAAAAAAAABqoAAAAAAAAAAAAABn0AAAPj"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAA1IAAAQNAAAAAAAAAAAAAANSAAAEDQAAAAAAAAAABqoAAAAAAAAAAAAAA1IAAAQN"
     },
     "screen": {
       "depth": 32,
@@ -245,9 +253,113 @@
       }
     }
   },
+  "geometry-of-preferences dialog geometry": {
+    "frame_geometry": {
+      "height": 720,
+      "width": 930,
+      "x": 0,
+      "y": 0
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 720,
+      "width": 930,
+      "x": 0,
+      "y": 0
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 720,
+      "width": 930,
+      "x": 0,
+      "y": 0
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAA6EAAALPAAAAAAAAAAAAAAOhAAACzwAAAAAAAAAABqoAAAAAAAAAAAAAA6EAAALP"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1066,
+        "width": 1706,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "California Institute of Technology",
+      "model": "0x1601",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1066,
+        "width": 1706
+      },
+      "virtual_geometry": {
+        "height": 1066,
+        "width": 1706,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-template_editor_dialog_geometry": {
+    "frame_geometry": {
+      "height": 454,
+      "width": 670,
+      "x": 120,
+      "y": 93
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 454,
+      "width": 670,
+      "x": 120,
+      "y": 93
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 454,
+      "width": 670,
+      "x": 120,
+      "y": 93
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAB4AAAAXQAAAxUAAAIiAAAAeAAAAF0AAAMVAAACIgAAAAAAAAAABqoAAAB4AAAAXQAAAxUAAAIi"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1066,
+        "width": 1706,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "California Institute of Technology",
+      "model": "0x1601",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1066,
+        "width": 1706
+      },
+      "virtual_geometry": {
+        "height": 1066,
+        "width": 1706,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "gpm_template_editor_font": "Sans Serif",
+  "gpm_template_editor_word_wrap_mode": true,
   "grid view visible": false,
   "library_usage_stats": {
-    "/home/michal/Calibre Library": 2
+    "/home/michal/Calibre Library": 8
   },
   "memory_view books view state": {
     "column_alignment": {
@@ -294,9 +406,23 @@
   "quick_start_guide_added": true,
   "quickview visible": false,
   "search bar visible": true,
+  "show_emblems": false,
+  "show_files_after_save": false,
+  "show_splash_screen": false,
   "tag browser search box visible": false,
   "tag_browser_splitter_horizontal_state": [
     true,
     200
+  ],
+  "tb_search_order": {
+    "0": 1,
+    "1": 2,
+    "2": 3,
+    "3": 4,
+    "4": 0
+  },
+  "template_editor_table_widths": [
+    80,
+    715
   ]
 }
