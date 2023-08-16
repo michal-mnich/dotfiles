@@ -2,7 +2,7 @@
 
 set $waybarDir ~/.config/waybar/sway
 exec waybar -c $waybarDir/config -s $waybarDir/style.css
-exec gammastep & udiskie & spotifyd
+exec gammastep & udiskie & spotifyd & dunst
 exec swaymsg 'workspace 4; exec keepassxc; workspace back_and_forth'
 exec wl-paste    -t text --watch clipman store
 exec wl-paste -p -t text --watch clipman store
@@ -26,17 +26,17 @@ input "type:touchpad" {
 }
 
 bindgesture swipe:right workspace prev
-bindgesture swipe:left workspace next
+bindgesture swipe:left  workspace next
 
 default_border none
 
 ### BINDINGS ###
 
-set $mod Mod4
-set $left h
-set $down j
-set $up k
-set $right l
+set $mod   Mod4
+set $left  left
+set $down  down
+set $up    up
+set $right right
 
 floating_modifier $mod normal
 
@@ -53,9 +53,9 @@ bindsym $mod+f fullscreen
 bindsym $mod+space floating toggle
 
 # Move focus 
-bindsym $mod+$left focus left
-bindsym $mod+$down focus down
-bindsym $mod+$up focus up
+bindsym $mod+$left  focus left
+bindsym $mod+$down  focus down
+bindsym $mod+$up    focus up
 bindsym $mod+$right focus right
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
