@@ -1,4 +1,4 @@
-### ENV VARIABLES ###
+# ENV VARIABLES
 
 # TexLive configuration
 export MANPATH="$MANPATH:/usr/local/texlive/2023/texmf-dist/doc/man"
@@ -11,5 +11,5 @@ export VISUAL="nvim"
 # Default pager
 export PAGER="nvimpager"
 
-#Enable Firefox Wayland support
+# Enable Firefox Wayland support
 export MOZ_ENABLE_WAYLAND=1
