@@ -33,8 +33,6 @@ plugins=(
     extract
     poetry
     rust
-    thefuck
-    autojump
 )
 source $ZSH/oh-my-zsh.sh
 

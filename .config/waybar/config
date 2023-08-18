@@ -94,7 +94,6 @@
 
     "custom/splash": {
         "exec": "hyprctl splash",
-        "restart-interval": 60,
         "format": "{}"
     },
 
