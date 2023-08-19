@@ -24,7 +24,7 @@ alias aliascfg="nvim $HOME/.config/my_aliases.zsh"
 alias hyprcfg="nvim $HOME/.config/hypr/hyprland.conf"
 alias swaycfg="nvim $HOME/.config/sway/config"
 alias waybarcfg="nvim $HOME/.config/waybar/config"
-alias nvimcfg="nvim $HOME/.config/nvim/init.lua"
+alias nvimcfg="nvim $HOME/.config/nvim/lua/custom/init.lua"
 alias kittycfg="nvim $HOME/.config/kitty/kitty.conf"
 
 # System maintenance
