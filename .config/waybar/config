@@ -89,7 +89,7 @@
     },
 
     "hyprland/window": {
-        "format": "{class}"
+        "format": "{title}"
     },
 
     "custom/splash": {
