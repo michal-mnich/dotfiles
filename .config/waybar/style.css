@@ -35,8 +35,6 @@ window#waybar {
     color: white;
     font-family: sans-serif;
     font-size: 13px;
-    border: green;
-    border-radius: 10px;
 }
 
 /* Each module */
@@ -117,8 +115,8 @@ window#waybar {
 }
 
 #workspaces button {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     color: white;
     font-size: 18px;
 }

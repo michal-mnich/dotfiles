@@ -31,7 +31,7 @@
             "critical": 15
         },
         // Connected to AC
-        "format": "  {icon}  {capacity}%",
+        "format": " {capacity}%",
         // Not connected to AC
         "format-discharging": "{icon}  {capacity}%",
         "format-icons": [
@@ -47,13 +47,15 @@
     "clock#time": {
         "interval": 1,
         "format": "{:%H:%M}",
-        "tooltip": true
+        "tooltip": true,
+        "tooltip-format": "{:%H:%M:%OS}"
     },
 
     "clock#date": {
       "interval": 10,
-      "format": "󰃭  {:%d.%m.%Y}",
-      "tooltip-format": "{:%e %B %Y}"
+      "format": "  {:%d.%m.%Y}",
+      "tooltip": true,
+      "tooltip-format": "{:%A}"
     },
 
     "cpu": {
@@ -76,7 +78,7 @@
 
     "network": {
         "interval": 5,
-        "format-wifi": "  {essid} ({signalStrength}%)",
+        "format-wifi": "   {essid} ({signalStrength}%)",
         "format-ethernet": "󰈀  {ifname}: {ipaddr}/{cidr}",
         "format-disconnected": "  Disconnected",
         "tooltip-format": "{ipaddr}"
@@ -119,10 +121,10 @@
         "format-bluetooth": "{icon} {volume}%",
         "format-muted": "",
         "format-icons": {
-            "headphone": "",
+            "headphone": " ",
             "hands-free": "",
             "headset": "",
-            "phone": "",
+            "phone": " ",
             "portable": "",
             "car": "",
             "default": ["", ""]
@@ -134,7 +136,8 @@
     },
     "backlight": {
         "format": "{icon} {percent}%",
-        "format-icons": [""],
-        "reverse-scrolling": true
+        "format-icons": ["󰃞 "],
+        "reverse-scrolling": true,
+        "tooltip": false
     },
 }
