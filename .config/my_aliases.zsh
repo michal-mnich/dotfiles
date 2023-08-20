@@ -14,7 +14,7 @@ alias cfgca="cfgc --all"
 alias "cfgca!"="cfgc --all --amend"
 
 alias cfga="cfg add"
-alias cfgaa="cfg add -all"
+alias cfgaa="cfg add --all"
 
 alias cfgst="cfg status"
 alias cfgp="cfg push"
