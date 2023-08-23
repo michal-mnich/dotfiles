@@ -2,3 +2,4 @@
 [Default Applications]
 application/pdf=librewolf.desktop
 text/html=librewolf.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
