@@ -2,8 +2,8 @@
 unalias run-help
 
 # Programs
-alias vim="nvim"
 alias python="ipython"
+alias rust-book="rustup docs --book"
 
 # Dotflies bare git repo
 alias cfg="git --git-dir=$HOME/.mycfg/ --work-tree=$HOME"
@@ -20,12 +20,12 @@ alias cfgst="cfg status"
 alias cfgp="cfg push"
 
 # Configuration files
-alias aliascfg="nvim $HOME/.config/my_aliases.zsh"
-alias hyprcfg="nvim $HOME/.config/hypr/hyprland.conf"
-alias swaycfg="nvim $HOME/.config/sway/config"
-alias waybarcfg="nvim $HOME/.config/waybar/config"
-alias nvimcfg="nvim $HOME/.config/nvim/lua/custom/init.lua"
-alias kittycfg="nvim $HOME/.config/kitty/kitty.conf"
+alias aliascfg="nvim $HOME/.config/aliases.zsh"
+alias hyprcfg="cd $HOME/.config/hypr"
+alias swaycfg="cd $HOME/.config/sway"
+alias waybarcfg="cd $HOME/.config/waybar"
+alias nvimcfg="cd $HOME/.config/nvim/lua/custom"
+alias kittycfg="cd $HOME/.config/kitty"
 
 # System maintenance
 alias tlupgrade="sudo tlmgr update --all"
