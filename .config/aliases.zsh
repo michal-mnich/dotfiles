@@ -28,7 +28,7 @@ alias nvimcfg="cd ~/.config/nvim/lua/custom && nvim init.lua"
 alias kittycfg="cd ~/.config/kitty && nvim kitty.conf"
 
 # System maintenance
-alias tlupgrade="sudo tlmgr update --all"
+alias tlupgrade="sudo tlmgr update --self --all"
 alias rsupgrade="rustup update"
 alias grubupdate="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias initramupdate="sudo mkinitcpio -P"
