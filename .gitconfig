@@ -3,3 +3,5 @@
 [user]
 	email = m.mnich@proton.me
 	name = Michał Mnich
+[push]
+	autoSetupRemote = true

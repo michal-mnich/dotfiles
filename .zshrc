@@ -1,5 +1,5 @@
 # My aliases
-source $HOME/.config/aliases.zsh
+source $HOME/.my_aliases
 
 # Path to the oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
