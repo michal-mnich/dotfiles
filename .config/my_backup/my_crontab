@@ -1,0 +1,42 @@
+# Examples:
+# 1. Run a script every day at 3:30 AM
+# 30 3 * * * /path/to/script.sh
+
+# 2. Run a script every Monday at 8:00 PM
+# 0 20 * * 1 /path/to/script.sh
+
+# 3. Run a script every 15 minutes
+# */15 * * * * /path/to/script.sh
+
+# 4. Run a script every weekday (Monday to Friday) at 9:30 AM
+# 30 9 * * 1-5 /path/to/script.sh
+
+# 5. Run a script twice a month, on the 1st and 15th day, at 12:00 PM
+# 0 12 1,15 * * /path/to/script.sh
+
+# 6. Run a script every Sunday at midnight
+# 0 0 * * 0 /path/to/script.sh
+
+# 7. Run a script every hour at 30 minutes past the hour
+# 30 * * * * /path/to/script.sh
+
+# Tips:
+# - Use the full path to the script or command to ensure it's found correctly.
+# - Use '*' to match any value in a field, and use ranges or lists for specific values.
+# - Use '*/n' to specify intervals (e.g., */15 for every 15 minutes).
+# - You can comment out lines by starting them with '#'.
+# - Check your system's timezone if scheduling across different time zones.
+# - View/edit your crontab using 'crontab -e' command.
+
+# Learn more about cron syntax: man 5 crontab
+
+# ┌─ minute (0 - 59)
+# │    ┌─ hour (0 - 23)
+# │    │    ┌─ day of month (1 - 31)
+# │    │    │    ┌─ month (1 - 12)
+# │    │    │    │    ┌─ day of week (0 - 6) (Sunday = 0 or 7)
+# │    │    │    │    │    ┌─ command to be executed
+# │    │    │    │    │    │ 
+  */15 *    *    *    *    rclone bisync --check-access /home/michal/keepassxc mimuw:keepassxc
+  @hourly                  /home/michal/.config/my_backup/backup.sh
+
