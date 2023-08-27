@@ -20,7 +20,5 @@ cp /etc/default/{grub,cpupower} $backup_dir/
 cp /etc/xdg/reflector/reflector.conf $backup_dir/reflector.conf
 
 # Add timestamp to backup
-timestamp=$(date +"%Y%m%d%H%M%S")
-rm $backup_dir/*.timestamp
-touch $backup_dir/${timestamp}.timestamp
+echo $(date +"%d.%m.%Y %H:%M:%S") > $backup_dir/timestamp
 
