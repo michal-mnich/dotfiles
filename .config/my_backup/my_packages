@@ -7,7 +7,8 @@ base-devel
 bleachbit
 brightnessctl
 calibre
-clipman
+cht.sh-git
+copyq
 cpupower
 cronie
 dunst

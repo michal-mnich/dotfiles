@@ -43,3 +43,6 @@ bindkey '^ ' autosuggest-accept
 
 # Syntax highlighting plugin (must be sourced last!!!)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Custom scripts
+fpath=(~/.zsh.d/ $fpath)
