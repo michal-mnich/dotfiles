@@ -14,7 +14,8 @@
     ],
 
     "modules-right": [
-        "network",
+        "network#vpn",
+        "network#wlan",
         "memory",
         "cpu",
         "pulseaudio",
@@ -76,10 +77,19 @@
         }
     },
 
-    "network": {
+    "network#vpn": {
+        "interface": "wg-mullvad",
+        "interval": 5,
+        "format-ethernet": " ",
+        "format-disconnected": " ",
+        "tooltip-format": "{ipaddr}",
+        "on-click": "mullvad-vpn"
+    },
+
+    "network#wlan": {
         "interval": 5,
         "format-wifi": "   {essid} ({signalStrength}%)",
-        "format-ethernet": "󰈀  {ifname}: {ipaddr}/{cidr}",
+        "format-ethernet": "󰈀  {ifname}",
         "format-disconnected": "  Disconnected",
         "tooltip-format": "{ipaddr}",
         "on-click": "kitty nmtui"

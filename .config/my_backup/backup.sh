@@ -1,23 +1,40 @@
-#!/bin/bash
+#!/bin/zsh
+
+setopt extended_glob
 
 # Backup directory
-backup_dir="/home/michal/.config/my_backup"
+backup_dir="$HOME/.config/my_backup"
+global_dir="$backup_dir/global"
 
-# Create the backup directory if it doesn't exist
+# Clear the directory except for this script
+rm -rf $backup_dir/**/^$(basename $0)
+
 mkdir -p $backup_dir
+mkdir -p $global_dir
 
 # Backup environment variables
-env > $backup_dir/my_env
+env | sort -d > $backup_dir/my_env
 
-# Back up installed packages
+# Backup installed packages
 yay -Qqe > $backup_dir/my_packages
 
-# Backup user crontab
 crontab -l > $backup_dir/my_crontab
 
-# Backup system configuration files
-cp /etc/default/{grub,cpupower} $backup_dir/
-cp /etc/xdg/reflector/reflector.conf $backup_dir/reflector.conf
+global_files=(
+    /etc/anacrontab
+    /etc/mkinitcpio.conf
+    /etc/default/grub
+    /etc/default/cpupower
+    /etc/xdg/reflector/reflector.conf
+    )
+
+for file in ${global_files[@]}; do
+    cp $file $global_dir/my_$(basename $file)
+done
+ 
+# Backup udev rules
+mkdir -p $global_dir/udev_rules
+cp /etc/udev/rules.d/* $global_dir/udev_rules
 
 # Add timestamp to backup
 echo $(date +"%d.%m.%Y %H:%M:%S") > $backup_dir/timestamp

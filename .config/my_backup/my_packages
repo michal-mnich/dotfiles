@@ -7,13 +7,13 @@ base-devel
 bleachbit
 brightnessctl
 calibre
-cht.sh-git
 copyq
 cpupower
 cronie
 dunst
 dust
 efibootmgr
+fd
 gammastep
 gdb
 git

@@ -2,9 +2,9 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/michal/.gtkrc-2.0.mine"
-gtk-theme-name="Adwaita"
+gtk-theme-name="adw-gtk3-dark"
 gtk-icon-theme-name="Adwaita"
-gtk-font-name="Cantarell 11"
+gtk-font-name="Sans 11"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=24
 gtk-toolbar-style=GTK_TOOLBAR_ICONS

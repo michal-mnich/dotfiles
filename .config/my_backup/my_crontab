@@ -37,6 +37,6 @@
 # │    │    │    │    ┌─ day of week (0 - 6) (Sunday = 0 or 7)
 # │    │    │    │    │    ┌─ command to be executed
 # │    │    │    │    │    │ 
-  */15 *    *    *    *    rclone bisync --check-access /home/michal/keepassxc mimuw:keepassxc
-  @hourly                  /home/michal/.config/my_backup/backup.sh
+  */15 *    *    *    *    rclone bisync --check-access $HOME/keepassxc mimuw:keepassxc
+  @daily                   $HOME/.config/my_backup/backup.sh
 

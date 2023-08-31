@@ -43,8 +43,7 @@ window#waybar {
 #backlight,
 #clock,
 #cpu,
-#memory,
-#network {
+#memory {
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -106,7 +105,15 @@ window#waybar {
     animation-duration: 2s;
 }
 
-#network.disconnected {
+#network.vpn {
+    padding-left: 10px;
+}
+
+#network.wlan {
+    padding-right: 10px;
+}
+
+#network.wlan.disconnected {
     color: orange;
 }
 

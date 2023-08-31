@@ -1,6 +1,3 @@
-# My aliases
-source $HOME/.my_aliases
-
 # Path to the oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -25,16 +22,17 @@ ZSH_ALIAS_FINDER_AUTOMATIC=true
 # Oh-My-Zsh plugins
 plugins=(
     git
-    aliases
     alias-finder
     archlinux
-    copyfile
-    rand-quote
     extract
     poetry
     rust
 )
 source $ZSH/oh-my-zsh.sh
+
+# My config
+
+setopt extended_glob
 
 # Autosuggestions plugin (inline gray text)
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -44,5 +42,8 @@ bindkey '^ ' autosuggest-accept
 # Syntax highlighting plugin (must be sourced last!!!)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Custom scripts
-fpath=(~/.zsh.d/ $fpath)
+# My aliases
+source $HOME/.my_aliases
+
+# My functions
+source $HOME/.my_functions

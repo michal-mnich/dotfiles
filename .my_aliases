@@ -20,7 +20,7 @@ alias cfgst="cfg status"
 alias cfgp="cfg push"
 
 # Configuration files
-alias zshcfg="nvim ~/{.zshrc,.zprofile,.zshenv,.my_aliases}"
+alias zshcfg="nvim ~/{.zshrc,.zprofile,.zshenv,.my_aliases,.my_functions}"
 alias hyprcfg="nvim ~/.config/hypr/{hyprland.conf,binds.conf}"
 alias swaycfg="nvim ~/.config/sway/config"
 alias waybarcfg="nvim ~/.config/waybar/{config,style.css}"
