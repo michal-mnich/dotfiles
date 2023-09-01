@@ -1,6 +1,9 @@
 acpi
 adobe-source-sans-fonts
 adobe-source-serif-fonts
+adw-gtk3
+adwaita-qt5-git
+adwaita-qt6-git
 amd-ucode
 base
 base-devel
@@ -10,6 +13,7 @@ calibre
 copyq
 cpupower
 cronie
+dosfstools
 dunst
 dust
 efibootmgr
@@ -20,6 +24,7 @@ git
 git-filter-repo
 gnome-keyring
 go
+gparted
 grub
 gucharmap
 hunspell-en_us
@@ -35,6 +40,7 @@ ipython
 jdk-openjdk
 keepassxc
 kitty
+libadwaita
 libmythes
 libreoffice-fresh
 librewolf-bin
@@ -43,6 +49,7 @@ linux-firmware
 man-db
 man-pages
 mpv
+mtools
 mullvad-vpn-bin
 mythes-en
 mythes-pl
@@ -55,6 +62,7 @@ noto-fonts-emoji
 noto-fonts-extra
 npm
 nvimpager
+nwg-look-bin
 openjdk-doc
 openssh
 pavucontrol
@@ -62,17 +70,22 @@ pipewire
 pipewire-alsa
 pipewire-docs
 pipewire-pulse
+polkit-gnome
 pycharm-professional
 python
 python-poetry
+qbittorrent
 qt5-wayland
+qt5ct
 qt6-wayland
+qt6ct
 ranger
 rar
 rclone
 reflector
 ripgrep
 rofi-lbonn-wayland-git
+rsync
 rustup
 scdoc
 spotify
@@ -92,6 +105,7 @@ ttf-ms-win11-auto
 ttf-roboto
 udiskie
 unzip
+ventoy-bin
 visual-studio-code-bin
 waybar
 webcord
@@ -99,6 +113,7 @@ wev
 wireplumber
 wl-clipboard
 xdg-desktop-portal-hyprland
+xsettingsd
 yay
 zip
 zsh

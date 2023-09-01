@@ -4,7 +4,7 @@
     // height calculated dynamically
 
     "modules-left": [
-        "wlr/workspaces",
+        "hyprland/workspaces",
         "hyprland/submap",
         "custom/splash"
     ],
@@ -110,9 +110,8 @@
         "format": "{}"
     },
 
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "format": "{name}: {icon}",
-        "on-click": "activate",
         "format-icons": {
             "1": "",
             "2": "󰈹",
@@ -120,7 +119,7 @@
             "4": "",
             "5": "󰈹",
             "6": "󰨞",
-            "default": ""
+            "default": "",
         },
         "persistent_workspaces": {
             "1": ["eDP-1"],
