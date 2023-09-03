@@ -4,38 +4,34 @@ setopt extended_glob
 
 # Backup directory
 backup_dir="$HOME/.config/my_backup"
-global_dir="$backup_dir/global"
+root_dir="$backup_dir/root"
 
 # Clear the directory except for this script
 rm -rf $backup_dir/**/^$(basename $0)
 
 mkdir -p $backup_dir
-mkdir -p $global_dir
+mkdir -p $root_dir
 
 # Backup environment variables
-env | sort -d > $backup_dir/my_env
+env | sort -d > $backup_dir/envvars
 
 # Backup installed packages
-yay -Qqe > $backup_dir/my_packages
+yay -Qqe > $backup_dir/packages_explicit
 
-crontab -l > $backup_dir/my_crontab
+fcrontab -l > $backup_dir/fcrontab_michal 2> /dev/null
 
-global_files=(
-    /etc/anacrontab
+root_copy=(
     /etc/mkinitcpio.conf
     /etc/default/grub
     /etc/default/cpupower
     /etc/xdg/reflector/reflector.conf
+    /etc/udev/rules.d
     )
 
-for file in ${global_files[@]}; do
-    cp $file $global_dir/my_$(basename $file)
+for item in ${root_copy[@]}; do
+    rsync -Ra $item $root_dir
 done
  
-# Backup udev rules
-mkdir -p $global_dir/udev_rules
-cp /etc/udev/rules.d/* $global_dir/udev_rules
-
 # Add timestamp to backup
 echo $(date +"%d.%m.%Y %H:%M:%S") > $backup_dir/timestamp
 

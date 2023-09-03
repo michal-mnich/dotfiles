@@ -6,12 +6,12 @@ configuration {
   	xoffset: 0;
   	fixed-num-lines: true;
   	show-icons: true;
-  	terminal: "alacritty";
+  	terminal: "kitty";
     ssh-client: "ssh";
-    ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";
-    run-command: "{cmd}";
+    ssh-command: "kitty --hold ssh {host}";
+    run-command: "zsh -c {cmd}";
     run-list-command: "";
-    run-shell-command: "{terminal} -e {cmd}";
+    run-shell-command: "kitty --hold {cmd}";
   	window-command: "wmctrl -i -R {window}";
     window-match-fields: "all";
   	icon-theme: "hicolor";
@@ -145,7 +145,7 @@ configuration {
       delay:  0;
   }
   filebrowser {
-      directory: "/";
+      directory: "$HOME";
       directories-first: true;
       sorting-method:    "name";
   }

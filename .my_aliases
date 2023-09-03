@@ -32,3 +32,6 @@ alias tlupgrade="sudo tlmgr update --self --all"
 alias rsupgrade="rustup update"
 alias grubupdate="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias initramupdate="sudo mkinitcpio -P"
+
+# Misc
+alias clr="clear"

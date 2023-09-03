@@ -27,11 +27,11 @@ plugins=(
     extract
     poetry
     rust
+    sudo
 )
 source $ZSH/oh-my-zsh.sh
 
 # My config
-
 setopt extended_glob
 
 # Autosuggestions plugin (inline gray text)

@@ -12,11 +12,11 @@ brightnessctl
 calibre
 copyq
 cpupower
-cronie
 dosfstools
 dunst
 dust
 efibootmgr
+fcron
 fd
 gammastep
 gdb
