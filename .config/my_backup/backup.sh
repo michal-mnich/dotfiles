@@ -35,3 +35,4 @@ done
 # Add timestamp to backup
 echo $(date +"%d.%m.%Y %H:%M:%S") > $backup_dir/timestamp
 
+# REMINDERS:

@@ -45,7 +45,7 @@ configuration {
   	max-history-size: 25;
   	combi-hide-mode-prefix: true;
   	combi-display-format: "{mode} {text}";
-  	matching-negate-char: '-';
+//	matching-negate-char: '-';
 // 	cache-dir: ;
   	window-thumbnail: true;
   	drun-use-desktop-cache: false;

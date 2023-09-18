@@ -6,7 +6,7 @@ unalias run-help
 alias rust-book="rustup docs --book"
 
 # Dotflies bare git repo
-alias cfg="git --git-dir=$HOME/.my_dotfiles --work-tree=$HOME"
+alias cfg="git --git-dir=$HOME/repos/dotfiles --work-tree=$HOME"
 
 alias cfgc="cfg commit --verbose"
 alias "cfgc!"="cfgc --amend"
@@ -20,7 +20,7 @@ alias cfgst="cfg status"
 alias cfgp="cfg push"
 
 # Configuration files
-alias zshcfg="nvim ~/{.zshrc,.zprofile,.zshenv,.my_aliases,.my_functions}"
+alias zshcfg="nvim ~/{.zshrc,.zprofile,.zshenv} ~/.config/{aliases.zsh,functions.zsh}"
 alias hyprcfg="nvim ~/.config/hypr/{hyprland.conf,binds.conf}"
 alias swaycfg="nvim ~/.config/sway/config"
 alias waybarcfg="nvim ~/.config/waybar/{config,style.css}"
@@ -35,3 +35,4 @@ alias initramupdate="sudo mkinitcpio -P"
 
 # Misc
 alias clr="clear"
+alias l="ls -lAh --color=tty --group-directories-first --time-style=+\"%d.%m.%Y %H:%M:%S\" --no-group"

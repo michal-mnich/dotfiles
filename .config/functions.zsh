@@ -15,3 +15,10 @@ cheat() {
         curl "$url/:help"
     fi
 }
+# reminder to include in backup.sh
+backup() {
+    script="$HOME/.config/my_backup/backup.sh"
+    for arg in "$@"; do
+        echo "# backup: $(realpath $arg)" >> $script
+    done
+}

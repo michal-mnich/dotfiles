@@ -7,8 +7,8 @@ ZSH_THEME="robbyrussell"
 # Update oh-my-zsh automatically without asking.
 zstyle ':omz:update' mode auto
 
-# Check for updates every day
-zstyle ':omz:update' frequency 1
+# Check for updates every week
+zstyle ':omz:update' frequency 7
 
 # Display an icon while waiting for a tab completion.
 COMPLETION_WAITING_DOTS="   "
@@ -37,13 +37,12 @@ setopt extended_glob
 # Autosuggestions plugin (inline gray text)
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-bindkey '^ ' autosuggest-accept
 
 # Syntax highlighting plugin (must be sourced last!!!)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # My aliases
-source $HOME/.my_aliases
+source $HOME/.config/aliases.zsh
 
 # My functions
-source $HOME/.my_functions
+source $HOME/.config/functions.zsh

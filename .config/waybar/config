@@ -78,12 +78,12 @@
     },
 
     "network#vpn": {
-        "interface": "wg-mullvad",
+        "interface": "arch-PL-64",
         "interval": 5,
         "format-ethernet": " ",
         "format-disconnected": " ",
         "tooltip-format": "{ipaddr}",
-        "on-click": "mullvad-vpn"
+        "on-click": "/home/michal/.config/hypr/toggle_vpn.sh"
     },
 
     "network#wlan": {
@@ -102,11 +102,16 @@
     },
 
     "hyprland/window": {
-        "format": "{title}"
+        "format": "{title}",
+        "separate-outputs": true
     },
 
     "custom/splash": {
-        "exec": "hyprctl splash",
+        "interval": 600,
+        "exec": "/home/michal/.config/hypr/quote2.sh",
+        "on-click": "/home/michal/.config/hypr/quote2.sh",
+        "tooltip": true,
+        "return-type": "json",
         "format": "{}"
     },
 
