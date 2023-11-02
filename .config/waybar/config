@@ -78,7 +78,7 @@
     },
 
     "network#vpn": {
-        "interface": "arch-PL-64",
+        "interface": "arch-DE-126",
         "interval": 5,
         "format-ethernet": " ",
         "format-disconnected": " ",
@@ -107,9 +107,9 @@
     },
 
     "custom/splash": {
-        "interval": 600,
+        "interval": 3600,
         "exec": "/home/michal/.config/hypr/quote2.sh",
-        "on-click": "/home/michal/.config/hypr/quote2.sh",
+        "on-click": "",
         "tooltip": true,
         "return-type": "json",
         "format": "{}"

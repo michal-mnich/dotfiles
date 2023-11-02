@@ -22,3 +22,10 @@ backup() {
         echo "# backup: $(realpath $arg)" >> $script
     done
 }
+# open with default application
+o() {
+    rm ~/.xdg-open-log
+    for arg in "$@"; do
+        xdg-open $arg &>> ~/.xdg-open-log
+    done
+}
