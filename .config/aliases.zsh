@@ -10,6 +10,7 @@ alias java17-docs="xdg-open /usr/share/doc/java17-openjdk/index.html"
 alias linux-docs="xdg-open /usr/share/doc/linux/index.html"
 alias cpp-docs="xdg-open /usr/share/doc/cppreference/en/index.html"
 alias psql-docs="xdg-open /usr/share/doc/postgresql/html/index.html"
+alias cormen="xdg-open ~/calibre/nauka/Thomas\ H.\ Cormen/Introduction\ to\ Algorithms,\ 4th\ Edition\ \(111\)/Introduction\ to\ Algorithms,\ 4th\ Edition\ -\ Thomas\ H.\ Cormen.pdf"
 
 # Dotflies bare git repo
 alias cfg="git --git-dir=$HOME/repos/dotfiles --work-tree=$HOME"
@@ -24,6 +25,7 @@ alias cfgaa="cfg add --all"
 
 alias cfgst="cfg status"
 alias cfgp="cfg push"
+alias cfgrm="cfg rm --cached"
 
 # Configuration files
 alias zshcfg="nvim ~/{.zshrc,.zprofile,.zshenv} ~/.config/{aliases.zsh,functions.zsh}"
@@ -42,5 +44,3 @@ alias initramupdate="sudo mkinitcpio -P"
 alias clr="clear"
 alias l="ls -lAh --color=tty --group-directories-first --time-style=+\"%d.%m.%Y %H:%M:%S\" --no-group"
 alias yaclean="yay -Sc --noconfirm"
-alias gccd="gcc @$HOME/.gcc_debug_flags "
-alias g++d="g++ @$HOME/.gcc_debug_flags "

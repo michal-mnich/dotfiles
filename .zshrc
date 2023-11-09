@@ -46,3 +46,10 @@ source $HOME/.config/aliases.zsh
 
 # My functions
 source $HOME/.config/functions.zsh
+
+# pipx config and completions
+export PATH="$PATH:/home/michal/.local/bin"
+export USE_EMOJI=0
+autoload -U bashcompinit
+bashcompinit
+eval "$(register-python-argcomplete pipx)"

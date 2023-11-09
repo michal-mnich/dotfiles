@@ -29,3 +29,13 @@ o() {
         xdg-open $arg &>> ~/.xdg-open-log
     done
 }
+# compile c++ program with debugging flags
+g++d() {
+    out=${$(realpath $1):r}
+    g++ @$HOME/.g++_debug_flags $1 -o $out
+}
+# compile c program with debugging flags
+gccd() {
+    out=${$(realpath $1):r}
+    gcc @$HOME/.gcc_debug_flags $1 -o $out
+}
