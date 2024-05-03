@@ -54,7 +54,7 @@
 
     "clock#date": {
       "interval": 10,
-      "format": "  {:%d.%m.%Y}",
+      "format": " {:%d.%m.%Y}",
       "tooltip": true,
       "tooltip-format": "{:%A}"
     },
@@ -127,12 +127,8 @@
             "default": "",
         },
         "persistent_workspaces": {
-            "1": ["eDP-1"],
-            "2": ["eDP-1"],
-            "3": ["eDP-1"],
-            "4": ["HDMI-A-1"],
-            "5": ["HDMI-A-1"],
-            "6": ["HDMI-A-1"]
+            "eDP-1": [ 1, 2, 3 ],
+            "HDMI-A-1": [ 4, 5, 6 ],
         }
     },
     "pulseaudio": {

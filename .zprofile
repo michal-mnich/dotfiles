@@ -10,4 +10,4 @@
 [[ "$(tty)" = "/dev/tty2" ]] && exec sway &> "$HOME/.sway_log"
 
 # Created by `pipx` on 2023-11-04 20:44:28
-export PATH="$PATH:/home/michal/.local/bin"
+# export PATH="$PATH:/home/michal/.local/bin"

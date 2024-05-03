@@ -7,8 +7,8 @@ ZSH_THEME="robbyrussell"
 # Update oh-my-zsh automatically without asking.
 zstyle ':omz:update' mode auto
 
-# Check for updates every week
-zstyle ':omz:update' frequency 7
+# Check for updates every day
+zstyle ':omz:update' frequency 1
 
 # Display an icon while waiting for a tab completion.
 COMPLETION_WAITING_DOTS="   "
@@ -28,6 +28,7 @@ plugins=(
     poetry
     rust
     sudo
+    zoxide
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -49,7 +50,11 @@ source $HOME/.config/functions.zsh
 
 # pipx config and completions
 export PATH="$PATH:/home/michal/.local/bin"
-export USE_EMOJI=0
+export USE_EMOJI=1
 autoload -U bashcompinit
 bashcompinit
 eval "$(register-python-argcomplete pipx)"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

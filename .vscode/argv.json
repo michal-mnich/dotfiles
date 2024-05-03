@@ -19,5 +19,5 @@
 	"crash-reporter-id": "0387a74c-2cb8-48c2-86cb-6db414803b13",
 
 	// Use gnome-keyring for storing login information.
-	"password-store":"gnome",
+	"password-store":"gnome-libsecret",
 }
