@@ -35,13 +35,6 @@ source $ZSH/oh-my-zsh.sh
 # My config
 setopt extended_glob
 
-# Autosuggestions plugin (inline gray text)
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-
-# Syntax highlighting plugin (must be sourced last!!!)
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # My aliases
 source $HOME/.config/aliases.zsh
 
@@ -51,10 +44,17 @@ source $HOME/.config/functions.zsh
 # pipx config and completions
 export PATH="$PATH:/home/michal/.local/bin"
 export USE_EMOJI=1
-autoload -U bashcompinit
-bashcompinit
-eval "$(register-python-argcomplete pipx)"
+# autoload -U bashcompinit
+# bashcompinit
+# eval "$(register-python-argcomplete pipx)"
 
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+# source <(ng completion script)
+
+# Syntax highlighting plugin
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Autosuggestions plugin (inline gray text)
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)

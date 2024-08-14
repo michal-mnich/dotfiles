@@ -10,7 +10,6 @@ alias java17-docs='xdg-open /usr/share/doc/java17-openjdk/index.html'
 alias linux-docs='xdg-open /usr/share/doc/linux/index.html'
 alias cpp-docs='xdg-open /usr/share/doc/cppreference/en/index.html'
 alias psql-docs='xdg-open /usr/share/doc/postgresql/html/index.html'
-alias cormen='xdg-open ~/calibre/nauka/Thomas\ H.\ Cormen/Introduction\ to\ Algorithms,\ 4th\ Edition\ \(111\)/Introduction\ to\ Algorithms,\ 4th\ Edition\ -\ Thomas\ H.\ Cormen.pdf'
 
 # Dotflies bare git repo
 alias cfg='git --git-dir=$HOME/repos/dotfiles --work-tree=$HOME'
@@ -45,7 +44,3 @@ alias l='ls -lAh --color=tty --group-directories-first --time-style=+"%d.%m.%Y %
 alias yaclean='yay -Sc --noconfirm && yarem $(yaorph -q) --noconfirm'
 alias hgrep='history | grep'
 alias agrep='alias | grep'
-
-# VMs
-alias vssh='ssh -F =(vagrant ssh-config) -Y'
-alias vscp='scp -F =(vagrant ssh-config)'

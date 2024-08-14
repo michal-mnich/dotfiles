@@ -126,7 +126,7 @@
             "6": "󰨞",
             "default": "",
         },
-        "persistent_workspaces": {
+        "persistent-workspaces": {
             "eDP-1": [ 1, 2, 3 ],
             "HDMI-A-1": [ 4, 5, 6 ],
         }
