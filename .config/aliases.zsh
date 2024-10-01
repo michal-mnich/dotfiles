@@ -15,9 +15,9 @@ alias psql-docs='xdg-open /usr/share/doc/postgresql/html/index.html'
 alias cfg='git --git-dir=$HOME/repos/dotfiles --work-tree=$HOME'
 
 alias cfgc='cfg commit --verbose'
-alias 'cfgc!'="cfgc --amend"
+alias 'cfgc!'='cfgc --amend'
 alias cfgca='cfgc --all'
-alias 'cfgca!'="cfgc --all --amend"
+alias 'cfgca!'='cfgc --all --amend'
 
 alias cfga='cfg add'
 alias cfgaa='cfg add --all'
@@ -44,3 +44,4 @@ alias l='ls -lAh --color=tty --group-directories-first --time-style=+"%d.%m.%Y %
 alias yaclean='yay -Sc --noconfirm && yarem $(yaorph -q) --noconfirm'
 alias hgrep='history | grep'
 alias agrep='alias | grep'
+alias o='handlr open'
