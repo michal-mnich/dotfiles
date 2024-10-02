@@ -14,7 +14,7 @@
     ],
 
     "modules-right": [
-        "network#vpn",
+        "tray",
         "network#wlan",
         "memory",
         "cpu",
@@ -77,22 +77,18 @@
         }
     },
 
-    "network#vpn": {
-        "interface": "arch-DE-126",
-        "interval": 5,
-        "format-ethernet": " ",
-        "format-disconnected": " ",
-        "tooltip-format": "{ipaddr}",
-        "on-click": "/home/michal/.config/hypr/toggle_vpn.sh"
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10
     },
 
     "network#wlan": {
         "interval": 5,
-        "format-wifi": "   {essid} ({signalStrength}%)",
+        "format-wifi": "{essid}",
         "format-ethernet": "󰈀  {ifname}",
         "format-disconnected": "  Disconnected",
         "tooltip-format": "{ipaddr}",
-        "on-click": "kitty nmtui"
+        "on-click": "/home/michal/.config/hypr/toggle_vpn.sh"
     },
 
     "hyprland/submap": {

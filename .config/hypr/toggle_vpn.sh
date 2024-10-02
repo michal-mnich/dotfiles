@@ -10,7 +10,7 @@ if [[ -z "$(wg show interfaces | grep "$VPN_IFACE")" ]]; then
     wg-quick up "$VPN_IFACE" || exit 1
     while true; do
         # Get NAT-PMP config from the VPN provider
-        logs="$(natpmpc -a 1 0 tcp 60 -g "$VPN_GATEWAY")"
+        logs="$(natpmpc -a 1 0 tcp 60 -g "$VPN_GATEWAY" && natpmpc -a 1 0 udp 60 -g "$VPN_GATEWAY")"
 
         # Extract the assigned port
         port="$(echo "$logs" | grep "Mapped public port" -m 1 | cut -d " " -f 4)"

@@ -102,11 +102,12 @@ window#waybar {
 #memory.critical {
     color: red;
     animation-name: blink-critical;
-    animation-duration: 2s;
+    animation-duration: 2s; 
 }
 
-#network.vpn {
+#tray {
     padding-left: 10px;
+    padding-right: 5px;
 }
 
 #network.wlan {
