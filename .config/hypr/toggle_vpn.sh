@@ -4,7 +4,7 @@
 exec > /dev/null 2>&1
 
 VPN_GATEWAY="10.2.0.1"
-VPN_IFACE="arch-DE-126"
+VPN_IFACE="arch-CH-365"
 
 if [[ -z "$(wg show interfaces | grep "$VPN_IFACE")" ]]; then
     wg-quick up "$VPN_IFACE" || exit 1
