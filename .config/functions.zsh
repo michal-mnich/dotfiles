@@ -22,3 +22,13 @@ backup() {
         echo "# backup: $(realpath $arg)" >> $script
     done
 }
+
+# sane defaults for quick c compilation
+ccc() {
+    gcc -std=gnu17 -g -Og -Wall -Wextra -Wpedantic -o "${1:r}" "$@"
+}
+
+# sane defaults for quick cpp compilation
+cxx() {
+    g++ -std=gnu++20 -g -Og -Wall -Wextra -Wpedantic -o "${1:r}" "$@"
+}
