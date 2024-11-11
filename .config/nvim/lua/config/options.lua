@@ -15,4 +15,3 @@ vim.opt.smoothscroll = true
 
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-
