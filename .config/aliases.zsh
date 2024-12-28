@@ -44,4 +44,5 @@ alias l='ls -lAh --color=tty --group-directories-first --time-style=+"%d.%m.%Y %
 alias yaclean='yay -Sc --noconfirm && yarem $(yaorph -q) --noconfirm'
 alias hgrep='history | grep'
 alias agrep='alias | grep'
+
 alias o='handlr open'
