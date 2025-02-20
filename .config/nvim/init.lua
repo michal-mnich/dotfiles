@@ -47,7 +47,7 @@ vim.opt.wrap = false
 
 -- Make line numbers default
 vim.opt.number = true
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -179,8 +179,32 @@ require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 
   {
-    'karb94/neoscroll.nvim',
-    opts = {},
+    'vim-pandoc/vim-pandoc',
+    init = function()
+      vim.g['pandoc#spell#enabled'] = 0
+      vim.g['pandoc#modules#disabled'] = { 'folding' }
+      vim.g['pandoc#syntax#conceal#use'] = 0
+      vim.g['pandoc#command#autoexec_on_writes'] = 1
+      vim.g['pandoc#command#autoexec_command'] = 'Pandoc pdf'
+      vim.g['pandoc#formatting#equalprg'] = ''
+      vim.g['pandoc#formatting#mode'] = 'ha'
+      vim.g['pandoc#compiler#arguments'] = '-dcustom'
+    end,
+  },
+  'vim-pandoc/vim-pandoc-syntax',
+
+  'ThePrimeagen/vim-be-good',
+
+  'karb94/neoscroll.nvim',
+
+  {
+    'lervag/vimtex',
+    lazy = false, -- we don't want to lazy load VimTeX
+    init = function()
+      -- VimTeX configuration goes here, e.g.
+      vim.g.vimtex_view_method = 'zathura'
+      vim.g.vimtex_quickfix_open_on_warning = 0
+    end,
   },
 
   {
@@ -578,6 +602,8 @@ require('lazy').setup({
         clangd = {},
         pylsp = {},
         rust_analyzer = {},
+        html = {},
+        prettierd = {},
         -- gopls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -669,11 +695,9 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
-        --
-        -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
+        python = { 'ruff_format', 'ruff_organize_imports' },
+        javascript = { 'prettierd' },
+        html = { 'prettierd' },
       },
     },
   },
@@ -721,6 +745,7 @@ require('lazy').setup({
       --  into multiple repos for maintenance purposes.
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
+      'micangl/cmp-vimtex',
     },
     config = function()
       -- See `:help cmp`
@@ -757,6 +782,8 @@ require('lazy').setup({
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
           ['<C-y>'] = cmp.mapping.confirm { select = true },
+
+          ['<C-e>'] = cmp.mapping.abort(),
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
@@ -800,6 +827,7 @@ require('lazy').setup({
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'path' },
+          { name = 'vimtex' },
         },
       }
     end,
@@ -851,7 +879,24 @@ require('lazy').setup({
     main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = 'all',
+      ensure_installed = {
+        'bash',
+        'c',
+        'cpp',
+        'diff',
+        'html',
+        'json',
+        'latex',
+        'lua',
+        'markdown',
+        'regex',
+        'toml',
+        'vim',
+        'vimdoc',
+        'yaml',
+        'python',
+        'rust',
+      },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
@@ -859,9 +904,9 @@ require('lazy').setup({
         -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
         --  If you are experiencing weird indenting issues, add the language to
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-        additional_vim_regex_highlighting = { 'ruby' },
+        additional_vim_regex_highlighting = { 'ruby', 'latex', 'markdown' },
       },
-      indent = { enable = true, disable = { 'ruby' } },
+      indent = { enable = true, disable = { 'ruby', 'latex', 'markdown' } },
     },
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:
